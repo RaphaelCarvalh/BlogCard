@@ -1,109 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
 
 body {
-    background-color: hsl(47,88%,63%);
+    background-color: hsl(47, 88%, 63%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: "Outfit", sans-serif;
 }
 
 .bloco-central {
     width: 384px;
-    height: 497px; 
+    height: 497px;
     background-color: hsl(0, 0%, 100%);
-  
     border-radius: 20px;
-    box-shadow: 15px 15px 5px rgba(0, 0, 0, 2);
-
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    align-content: center;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-image {
-    width: 346px; 
-    height: 201px; 
+    width: 346px;
+    height: 201px;
     margin-top: 20px;
-
-    overflow: hidden; 
-    border-radius: 20px;   
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-.conteudo{
+.conteudo {
     margin-left: 25px;
-
 }
+
 .quadrado-amarelo {
     width: 100px;
     height: 30px;
     background-color: #F4D04E;
-    margin-top: 20px;
-
+    margin: 20px 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 5px;
-
-    font-family: "Outfit", sans-serif;
     font-size: 14px;
     font-weight: bold;
     color: hsl(0, 0%, 0%);
-    margin-bottom: 10px;
 }
 
 .texto {
     font-size: 10px;
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 200;
-    font-style: normal;    
+    font-style: normal;
 }
 
-.temaArtigo{
-    color:#F4D04E;
+.temaArtigo {
+    color: #F4D04E;
     font-size: 20px;
     font-weight: bold;
-
 }
 
 .artigo {
     width: 332px;
-    height: auto;
-    
     color: hsl(212, 33%, 79%);
-    font-family: "Outfit", sans-serif;
     font-weight: 100;
     font-size: 14px;
-    font-style: normal;
     margin-bottom: 30px;
 }
 
-.autor{
-    display: flex;
-    flex-direction: row; 
-    justify-content: flex-start;
-    margin-top: 10px;
-}
-
-.id{
-    width: 32px;
-    height: 32px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.autor{
-    color: hsl(0, 0%, 0%);
+.autor {
     display: flex;
     align-items: center;
+    margin-top: 10px;
+    color: hsl(0, 0%, 0%);
     font-weight: bold;
 }
 
-/* Estilos para dispositivos com largura até 375px (Mobile) */
+.id {
+    width: 32px;
+    height: 32px;
+    margin: 10px 10px 0 0;
+}
+
+/* Regras de mídia para telas menores que 375 pixels */
+
 @media only screen and (max-width: 375px) {
-    
+    .bloco-central {
+        width: 80%;
+        height: 70%;       
+    }
+
+    .card-image {
+        width: 90%;        
+    }
+
+    .conteudo {
+        height: 80%;
+    }
+
+    .quadrado-amarelo {
+        max-width: 80px; /* Reduzindo o máximo para o quadrado amarelo */
+    }    
 }
